@@ -175,5 +175,3 @@ def handle_callbacks(call):
         coaching_selected = call.data.replace("flash_", "")
         conn = sqlite3.connect('extractor_master.db')
         cursor = conn.cursor()
- ̶ ̶ ̶ ̶ ̶ ̶
-Kya ese main.py pe add Krna h kya
