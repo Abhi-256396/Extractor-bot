@@ -1,5 +1,3 @@
-def is_allowed(user_id):
-    return user_id == ADMIN_ID
 import sqlite3
 import os
 import json
@@ -7,10 +5,13 @@ import time
 import requests
 import gc
 import config
+import telebot
 
 BOT_TOKEN = config.BOT_TOKEN
 ADMIN_ID = config.ADMIN_ID
 
+def is_allowed(user_id):
+    return True
 COACHING_DATABASE = {
     "exampur": {"name": "🎯 Exampur", "org_code": "expm"},
     "awadh_ojha": {"name": "📝 Awadh Ojha", "org_code": "ojha"},
