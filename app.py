@@ -3,7 +3,10 @@ import threading
 from flask import Flask
 import telebot
 
-from Extractor import main as bot_main
+try:
+    from Extractor import main as bot_main
+except:
+    from extractor import main as bot_main
 
 app = Flask(__name__)
 
