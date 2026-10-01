@@ -161,7 +161,13 @@ def handle_callbacks(call):
         markup.row(btn_support)
         
         bot.edit_message_text(chat_id=chat_id, message_id=call.message.message_id, 
-                              text="💬 **Need access? Contact Admin**\n──────────────────\n⚡ **SELECT COACHING FOR FLASH EXTRACT:**", reply_markup=markup)
+                result = cursor.fetchone()
+        conn.close()
+        bot.answer_callback_query(call.id, f"Selected: {coaching_selected}")
+
+if __name__ == "__main__":
+    init_db()
+    bot.infinity_polling()                      text="💬 **Need access? Contact Admin**\n──────────────────\n⚡ **SELECT COACHING FOR FLASH EXTRACT:**", reply_markup=markup)
     
     elif call.data == "go_main":
         markup = telebot.types.InlineKeyboardMarkup(row_width=1)
