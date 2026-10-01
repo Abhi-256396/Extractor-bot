@@ -12,6 +12,6 @@ def run_bot():
     os.system("python main.py")
 
 if __name__ == '__main__':
-        threading.Thread(target=run_bot).start()
+    threading.Thread(target=run_bot).start()
     p = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=p)
