@@ -1,6 +1,8 @@
 import os
-from flask import Flask
 import threading
+from flask import Flask
+import telebot
+
 from Extractor import main as bot_main
 
 app = Flask(__name__)
