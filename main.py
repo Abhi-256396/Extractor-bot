@@ -1,4 +1,5 @@
-import telebot
+def is_allowed(user_id):
+    return user_id == ADMIN_ID
 import sqlite3
 import os
 import json
