@@ -175,3 +175,6 @@ def handle_callbacks(call):
         conn = sqlite3.connect('extractor_master.db')
         cursor = conn.cursor()
         cursor.execute('SELECT token FROM sessions WHERE coaching_name = ?', (coaching_selected,))
+if __name__ == "__main__":
+    init_db()
+    bot.infinity_polling()
